@@ -17,7 +17,13 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/adminlte/dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/css/template.css">
+<!--
   <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/adminlte/dist/css/skins/skin-blue.min.css">
+  <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/adminlte/dist/css/skins/skin-black.css">
+  <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/adminlte/dist/css/skins/skin-purple.css">
+  <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/adminlte/dist/css/skins/skin-green.css">-->
+
+  <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/adminlte/dist/css/skins/_all-skins.css">
   <!-- JQuery -->
   <script src="<?php echo BASE_URL ?>assets/adminlte/bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript">var BASE_URL = '<?php echo BASE_URL; ?>';</script>
@@ -36,7 +42,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-purple sidebar-mini">
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -51,7 +57,7 @@
     </a>
 
     <!-- Header Navbar -->
-    <nav class="navbar navbar-static-top" role="navigation">
+    <nav class="navbar navbar-dark bg-dark" role="navigation">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>

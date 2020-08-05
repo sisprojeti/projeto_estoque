@@ -1,7 +1,10 @@
 	<!-- Conteudo da Pagina -->
 <section class="content-header">
 <h1>
-	Membros <i class="fa fa-"></i>
+	Membros <i class="fa fa-"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="<?php echo BASE_URL ?>views/imprimir.php" class="btn btn-info" onclick="return confirm('Gerar Relatório Excel dos membros.')">
+					Relatório de Membros
+				</a>
 </h1>
 </section>
 
@@ -14,41 +17,43 @@
 			 Membros - Listagem	
 			</div>
 			<div class="box-tools">
+				
 				<a href="<?php echo BASE_URL ?>membros/add" class="btn btn-success">
 					Adicionar
 				</a>
 			</div>
 		</div>
-		<div class="form-group col-md-4">
-			<form action="#" method="get" class="sidebar-form">
-        <div class="input-group" >
-          <input type="text" name="" class="form-control" placeholder="Search...">
-          <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form>
-		</div>
+
 		
-		<div class="box-body">
-			<table class="table table-hover" border="0" width="100%">
+			<form action="#" method="get" class="sidebar-form" style="border: 0 solid #000; " >
+		        <div class="input-group col-md-4" >
+		          <input type="text" name="" class="form-control" placeholder="Procurar membro..." border="0">
+		          <span class="input-group-btn">
+		                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+		                </button>
+		              </span>
+		        </div>
+		        
+		    </form>
+		
+		<div class="box-body table-responsive">
+			<table class="table table-bordered" border="0" width="100%">
 				<thead>
 					<tr>
-						<th>ID_FICHA</th>
-						<th>NOME</th>
-						<th>DATA DE NASCIMENTO</th>
-						<th>CPF</th>
-						<th>TELEFONE</th>
-						<th>SITUAÇÃO</th>
-						<th>AÇÕES</th>
+						<th scope="col">ID_FICHA</th>
+						<th scope="col">NOME</th>
+						<th scope="col">DATA DE NASCIMENTO</th>
+						<th scope="col">CPF</th>
+						<th scope="col">TELEFONE</th>
+						<th scope="col">SITUAÇÃO</th>
+						<th scope="col">AÇÕES</th>
 					</tr>
 				</thead>
 				<?php foreach ($list as $membro): ?>
 					<tr>
-						<td><?php echo $membro['id']; ?></td>
+						<td scope="row"><?php echo $membro['id']; ?></td>
 						<td><?php echo $membro['nome']; ?></td>
-						<td><?php echo $membro['dt_nasc']; ?></td>
+						<td><?php echo date("d/m/Y", strtotime($membro['dt_nasc'])); ?></td>
 						<td><?php echo $membro['cpf']; ?></td>
 						<td><?php echo $membro['tel']; ?></td>
 						<td><?php echo $membro['situacao']; ?></td>

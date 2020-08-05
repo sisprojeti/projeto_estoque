@@ -4,6 +4,7 @@ namespace Controllers;
 
 use \Core\Controller;
 use \Models\Users;
+use \Models\Home;
 
 class HomeController extends Controller {
 
@@ -25,6 +26,11 @@ class HomeController extends Controller {
 	}
 
 	public function index() {
+		$home = new Home();
+
+		$this->arrayInfo['quant_membros'] = $home->getQuantOfMembros();
+		$this->arrayInfo['quant_membros_ina'] = $home->getQuantOfMembrosIna();
+		$this->arrayInfo['quant_membros_ati'] = $home->getQuantOfMembrosAti();
 		$this->loadTemplate('home', $this->arrayInfo);
 	}
 

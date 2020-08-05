@@ -268,7 +268,7 @@ function selected( $value, $selected ){
 
 				<div class="col-md-4">
 					<button class="btn btn-primary">
-						Cadastar Membro <i class="fa fa-user-plus"></i>
+						Editar Membro <i class="fa fa-user-plus"></i>
 					</button>&nbsp;	
 
 					<a class="btn btn-danger" href="<?php echo BASE_URL ?>membros">
@@ -287,7 +287,13 @@ function selected( $value, $selected ){
 </form>
 
 </section>
-
+<script type="text/javascript">
+		$(document).ready(function(){
+			$("#cpf").mask("000.000.000-00");
+			$("#tel").mask("(00) 00000-0000");
+			$("#cep").mask("00000-000");
+		});
+	</script>
 <script type="text/javascript">
 		$("#cep").focusout(function(){
 			//Início do Comando AJAX

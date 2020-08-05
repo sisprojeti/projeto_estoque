@@ -263,7 +263,13 @@
 </form>
 
 </section>
-
+<script type="text/javascript">
+		$(document).ready(function(){
+			$("#cpf").mask("000.000.000-00");
+			$("#tel").mask("(00) 00000-0000");
+			$("#cep").mask("00000-000");
+		});
+	</script>
 <script type="text/javascript">
 		$("#cep").focusout(function(){
 			//Início do Comando AJAX
