@@ -117,7 +117,7 @@ function selected( $value, $selected ){
 
 				<div class="col-md-2">
 					Número: <i class="fa fa-"></i>
-					<input class="form-control" type="number" name="numero" id="numero" value="<?php echo $info['numero'] ?>" required ><br>
+					<input class="form-control" type="text" name="numero" id="numero" value="<?php echo $info['numero'] ?>" required ><br>
 				</div>
 
 				<div class="col-md-3">

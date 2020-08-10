@@ -13,10 +13,10 @@ if(ENVIRONMENT == 'development') {
 	$config['dbpass'] = '';
 } else {
 	// Caso esteja no Servidor Online
-	define("BASE_URL", "https://www.seusite.com.br/");
-	$config['dbname'] = '';
+	define("BASE_URL", "http://192.168.0.101/projeto_estoque/");
+	$config['dbname'] = 'igreja';
 	$config['host'] = 'localhost';
-	$config['dbuser'] = '';
+	$config['dbuser'] = 'root';
 	$config['dbpass'] = '';
 }
 
